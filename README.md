@@ -280,13 +280,13 @@ Notes:
 Feature Breakdown
     User Management:
             
-        Allows users to register, log in, and manage profiles (hosts & guests).
+    Allows users to register, log in, and manage profiles (hosts & guests).
 
-        Implements JWT/OAuth authentication for secure access.
+    Implements JWT/OAuth authentication for secure access.
         
-        Enables role-based permissions (e.g., hosts can list properties, guests can book).
+    Enables role-based permissions (e.g., hosts can list properties, guests can book).
         
-        Contribution: Forms the foundation for secure user interactions and personalized experiences.
+    Contribution: Forms the foundation for secure user interactions and personalized experiences.
 
 Property Management:
     
@@ -365,4 +365,161 @@ Feature Dependencies:
     Booking System → Triggers payments and reviews.
     
     This breakdown ensures the project aligns with Airbnb’s core functionalities while maintaining scalability.
+
+API Security:
+    Securing backend APIs is critical to protecting user data, preventing fraud, and maintaining platform integrity. 
+
+Key Security Measures:
+    
+    1. Authentication (JWT/OAuth):
+        Implementation: Users log in via tokens (JWT) or OAuth (Google/GitHub).
+        Why It Matters:
+            Ensures only verified users access the platform.
+            Prevents unauthorized account takeovers.
+    
+    2. Authorization (Role-Based Access Control)
+        Implementation: Checks user roles (e.g., guests can’t edit properties they don’t own).
+        Why It Matters: 
+            Restricts actions like property deletion to hosts/admins.
+            Protects against data tampering.
+        
+    3. Rate Limiting
+        Implementation: Limits API calls (e.g., 100 requests/minute per IP).
+        Why It Matters:
+            Prevents brute-force attacks and DDoS attempts.
+            Reduces server load during traffic spikes.
+    
+    4. Data Encryption
+        Implementation: HTTPS (TLS) for all requests; encrypts sensitive data (passwords, payments).
+        Why It Matters:
+            Shields data from interception (e.g., credit card details).
+            Complies with privacy laws (GDPR).
+
+    5. Input Validation & Sanitization
+        Implementation: Rejects malformed inputs (SQL/script injections).
+        Why It Matters:
+            Blocks SQL injection and XSS attacks.
+            Ensures database integrity.        
+    6. API Key Management
+        Implementation: Requires API keys for third-party integrations.
+        Why It Matters:
+        
+    Controls external access to sensitive endpoints.
+    Tracks and revokes compromised keys.
+    Security-Critical Areas    
+        User Data Protection
+        Measures: Authentication + encryption.
+
+    Risk Mitigated: Prevents identity theft and leaks.
+
+    Payment Processing
+    Measures: PCI-DSS compliance, tokenization.
+
+    Risk Mitigated: Stops financial fraud.
+        Property Listings
+    Measures: Authorization checks.
+
+    Risk Mitigated: Blocks fake/spam listings.
+        Admin Operations
+        Measures: IP whitelisting, multi-factor auth (MFA).
+        Risk Mitigated: Limits high-privilege access.
+
+CI/CD Pipeline
+    Definition of CI/CD:
+        Continuous Integration (CI) and Continuous Deployment (CD) automate the process of building, testing, and deploying code changes. This ensures faster, more reliable software releases by:
+
+    Catching bugs early through automated testing
+
+    Reducing manual errors in deployment
+
+    Enabling frequent updates with minimal downtime
+
+For the Airbnb Clone Project, CI/CD is essential to maintain stability while rapidly iterating on features like bookings, payments, and user management.
+
+Pipeline Stages:
+    Code Commit & Push
+        
+        Trigger: Developers push code to GitHub (main or feature branches).
+        
+        Tools: GitHub (Version Control)
+
+Continuous Integration (CI)
+
+Linting & Formatting:
+
+    Checks code style consistency (e.g., PEP8 for Python, ESLint for JS).
+
+    Tools: Pre-commit Hooks, GitHub Actions
+
+    Unit & Integration Tests:
+
+    Runs automated tests (Django tests, API endpoint validation).
+
+    Tools: Pytest, Postman/Newman
+
+Security Scans:
+    
+    Detects vulnerabilities (dependencies, secrets in code).
+    
+    Tools: Snyk, OWASP Dependency-Check
+
+Build & Containerization:
+
+    Docker Image Creation:
+    
+    Packages the app into a portable container.
+    
+    Tools: Docker, Docker Compose
+    
+    Artifact Storage:
+    
+    Stores build outputs for deployment.
+    
+    Tools: GitHub Packages, Docker Hub
+
+Continuous Deployment (CD):
+
+    Staging Deployment:
+
+    Auto-deploys to a staging environment for QA.
+
+    Tools: GitHub Actions, AWS Elastic Beanstalk
+
+    Production Deployment (Manual Approval):
+
+    Requires team approval before going live.
+
+    Tools: Kubernetes (GKE/EKS), Heroku
+
+Monitoring & Rollback:
+
+    Logs & Alerts: Tracks errors and performance (e.g., failed bookings).
+
+    Tools: Sentry, Datadog
+
+    Auto-Rollback: Reverts to last stable version if errors occur.
+    
+Tools Used:
+    
+    Purpose	Tools
+    
+    Version Control	GitHub
+    
+    CI/CD Orchestration	GitHub Actions, Jenkins (optional)
+    
+    Testing	Pytest, Postman, Selenium
+    
+    Containerization	Docker, Docker Compose
+    
+    Deployment	AWS/GCP, Heroku, Kubernetes
+    
+    Monitoring	Sentry, Datadog, Prometheus
+    
+    Why This Matters for the Airbnb Clone
+    
+    Reliability: Prevents broken features (e.g., payment processing) from reaching users.
+    
+    Speed: Enables rapid iteration on features like search filters or review systems.
+    
+    Security: Automated scans block vulnerabilities before deployment.
 
