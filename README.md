@@ -2,7 +2,8 @@
 The Airbnb Clone Project Blueprint
 
 Overview
-The Airbnb Clone Project is a full-stack web application designed to replicate the core functionality of Airbnb while providing a hands-on learning experience in modern software development. This project     emphasizes backend architecture, database design, API development, and application security within a collaborative team environment.
+
+    The Airbnb Clone Project is a full-stack web application designed to replicate the core functionality of Airbnb while providing a hands-on learning experience in modern software development. This project     emphasizes backend architecture, database design, API development, and application security within a collaborative team environment.
 
 
 Project Goals:
