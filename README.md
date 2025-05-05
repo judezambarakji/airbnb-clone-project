@@ -7,73 +7,73 @@ The Airbnb Clone Project is a full-stack web application designed to replicate t
 
 Project Goals:
 
-  Build a scalable booking platform with Airbnb-like features
+    Build a scalable booking platform with Airbnb-like features
 
-  Implement industry-standard development practices
+    Implement industry-standard development practices
 
-  Master collaborative workflows using GitHub
+    Master collaborative workflows using GitHub
 
-  Develop proficiency in backend systems and database design
+    Develop proficiency in backend systems and database design
 
-  Enhance understanding of API security and CI/CD pipelines
+    Enhance understanding of API security and CI/CD pipelines
 
-  Create comprehensive documentation for complex software projects
+    Create comprehensive documentation for complex software projects
 
 
 Tech Stack:
 
-  Backend
+    Backend
 
-  Framework: Django (Python)
+    Framework: Django (Python)
 
-  API: GraphQL
+    API: GraphQL
 
-  Database: MySQL (Relational Database)
+    Database: MySQL (Relational Database)
 
-  Authentication: JWT/OAuth (Security implementation)
+    Authentication: JWT/OAuth (Security implementation)
 
 
 DevOps & Infrastructure:
 
-  Containerization: Docker
+    Containerization: Docker
 
-  CI/CD: GitHub Actions
+    CI/CD: GitHub Actions
 
-  Version Control: GitHub
+    Version Control: GitHub
 
 
 Documentation:
 
-  Markdown (README.md, project documentation)
+    Markdown (README.md, project documentation)
 
-  Database schema design documentation
+    Database schema design documentation
 
 
 Key Features:
 
-  User authentication and authorization system
+    User authentication and authorization system
 
-  Property listing and search functionality
+    Property listing and search functionality
 
-  Booking and reservation management
+    Booking and reservation management
 
-  Review and rating system
+    Review and rating system
 
-  Secure payment processing (simulated)
+    Secure payment processing (simulated)
 
 Team Roles in the Airbnb Clone Project
 A successful software development project relies on clearly defined roles and responsibilities. Below is a breakdown of the key team roles in the Airbnb Clone Project, their responsibilities, and how they contribute to the project’s success.
 
 Project Manager (PM)
-  Responsibilities:
+    Responsibilities:
 
-  Oversees the entire project lifecycle, ensuring milestones are met.
+    Oversees the entire project lifecycle, ensuring milestones are met.
 
-  Facilitates communication between team members and stakeholders.
+    Facilitates communication between team members and stakeholders.
 
-  Manages timelines, sprints, and task delegation.
+    Manages timelines, sprints, and task delegation.
 
-  Ensures adherence to Agile/Scrum methodologies (if applicable).
+    Ensures adherence to Agile/Scrum methodologies (if applicable).
 
   Key Contribution:
     Keeps the project on track, resolves blockers, and ensures smooth collaboration.
