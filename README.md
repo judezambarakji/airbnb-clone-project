@@ -22,7 +22,141 @@ Project Goals:
 
 Tech Stack:
 
-    Backend
+Backend
+1. Django
+        
+        Purpose: High-level Python web framework for rapid backend development.
+
+        Role in Project:
+
+            Handles business logic (user auth, property listings, bookings).
+
+            Serves as the foundation for RESTful/GraphQL APIs.
+            
+2. Django REST Framework (DRF):
+
+        Purpose: Toolkit for building Web APIs in Django.
+
+        Role in Project:
+
+            Simplifies API endpoint creation (e.g., /api/properties).
+
+            Provides serialization for data exchange with frontend.
+
+3. GraphQL:
+
+        Purpose: Query language for APIs that enables efficient data fetching.
+
+        Role in Project:
+
+            Allows flexible queries (e.g., fetch property details + reviews in one request).
+
+            Reduces over-fetching compared to REST.
+
+Database
+4. PostgreSQL:
+        
+        Purpose: Open-source relational database system.
+
+        Role in Project:
+
+            Stores structured data (users, properties, bookings).
+
+            Supports complex queries (e.g., "available beach houses under $100/night").
+
+5. Redis
+
+        Purpose: In-memory data store.
+
+        Role in Project:
+
+            Caches frequently accessed data (e.g., search results).
+
+            Manages real-time notifications and rate limiting.
+
+Frontend
+6. React.js
+        
+        Purpose: JavaScript library for building interactive UIs.
+
+        Role in Project:
+
+            Powers dynamic features (search filters, booking calendars).
+
+            Communicates with backend via GraphQL/REST.
+
+7. Next.js (Optional)
+
+        Purpose: React framework for server-side rendering (SSR).
+
+        Role in Project:
+
+            Improves SEO for property listings.
+
+            Enables faster page loads.
+
+DevOps & Deployment
+8. Docker
+        
+        Purpose: Containerization platform.
+
+        Role in Project:
+
+            Ensures consistent environments (dev, staging, production).
+
+            Simplifies dependency management.
+
+9. Kubernetes
+
+        Purpose: Container orchestration system.
+
+        Role in Project:
+
+            Automates scaling (e.g., during peak booking times).
+
+            Manages microservices (payments, notifications).
+
+10. GitHub Actions
+
+        Purpose: CI/CD automation platform.
+
+        Role in Project:
+
+        Runs tests on every code push.
+
+        Deploys updates to cloud providers (AWS/GCP).
+
+APIs & Integrations
+11. Stripe/PayPal API
+        
+        Purpose: Payment processing.
+
+        Role in Project:
+
+        Securely handles bookings and refunds.
+
+12. Mapbox/Google Maps API
+
+        Purpose: Geospatial data visualization.
+
+        Role in Project:
+
+            Displays property locations and nearby attractions.
+
+        Why This Stack?
+            Scalability: PostgreSQL + Kubernetes handle growth in users/listings.
+
+            Developer Experience: Django + React offer robust ecosystems.
+
+            Performance: Redis + GraphQL optimize data delivery.
+
+        Alternatives Considered:
+
+            Database: MySQL → Chose PostgreSQL for advanced features.
+    
+            Frontend: Vue.js → Chose React for larger community support.
+
+Backend
 
     Framework: Django (Python)
 
