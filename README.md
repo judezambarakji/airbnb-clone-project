@@ -25,6 +25,7 @@ Project Goals:
 Technology Stack:
 
 Backend
+
 1. Django
         
         Purpose: High-level Python web framework for rapid backend development.
@@ -56,7 +57,8 @@ Backend
             Reduces over-fetching compared to REST.
 
 Database
-4. PostgreSQL:
+
+1. PostgreSQL:
         
         Purpose: Open-source relational database system.
 
@@ -66,7 +68,7 @@ Database
 
             Supports complex queries (e.g., "available beach houses under $100/night").
 
-5. Redis
+2. Redis
 
         Purpose: In-memory data store.
 
@@ -77,7 +79,8 @@ Database
             Manages real-time notifications and rate limiting.
 
 Frontend
-6. React.js
+
+1. React.js
         
         Purpose: JavaScript library for building interactive UIs.
 
@@ -87,7 +90,7 @@ Frontend
 
             Communicates with backend via GraphQL/REST.
 
-7. Next.js (Optional)
+2. Next.js (Optional)
 
         Purpose: React framework for server-side rendering (SSR).
 
@@ -98,7 +101,8 @@ Frontend
             Enables faster page loads.
 
 DevOps & Deployment
-8. Docker
+
+1. Docker
         
         Purpose: Containerization platform.
 
@@ -108,7 +112,7 @@ DevOps & Deployment
 
             Simplifies dependency management.
 
-9. Kubernetes
+2. Kubernetes
 
         Purpose: Container orchestration system.
 
@@ -118,7 +122,7 @@ DevOps & Deployment
 
             Manages microservices (payments, notifications).
 
-10. GitHub Actions
+3. GitHub Actions
 
         Purpose: CI/CD automation platform.
 
@@ -129,7 +133,7 @@ DevOps & Deployment
         Deploys updates to cloud providers (AWS/GCP).
 
 APIs & Integrations
-11. Stripe/PayPal API
+1. Stripe/PayPal API
         
         Purpose: Payment processing.
 
@@ -137,7 +141,7 @@ APIs & Integrations
 
         Securely handles bookings and refunds.
 
-12. Mapbox/Google Maps API
+2. Mapbox/Google Maps API
 
         Purpose: Geospatial data visualization.
 
