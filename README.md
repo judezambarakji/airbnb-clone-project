@@ -20,7 +20,7 @@ Project Goals:
     Create comprehensive documentation for complex software projects
 
 
-Tech Stack:
+Technology Stack:
 
 Backend
 1. Django
