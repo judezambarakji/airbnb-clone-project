@@ -269,11 +269,100 @@ Relationships:
 
     A Payment is linked to one Booking (One-to-One).
 
-
 Notes:
-Foreign Keys ensure data integrity between tables.
 
-Indexes are applied to frequently queried fields (e.g., property_id, user_id).
+    Foreign Keys ensure data integrity between tables.
 
-Cascade rules are set for deletions (e.g., deleting a user removes their properties)
+    Indexes are applied to frequently queried fields (e.g., property_id, user_id).
+
+    Cascade rules are set for deletions (e.g., deleting a user removes their properties)
+
+Feature Breakdown
+    User Management:
+            
+        Allows users to register, log in, and manage profiles (hosts & guests).
+
+        Implements JWT/OAuth authentication for secure access.
+        
+        Enables role-based permissions (e.g., hosts can list properties, guests can book).
+        
+        Contribution: Forms the foundation for secure user interactions and personalized experiences.
+
+Property Management:
+    
+    Lets hosts create, edit, and delete property listings (title, description, price, location).
+    
+    Supports image uploads for property galleries.
+    
+    Includes search and filtering (by price, location, amenities).
+    
+    Contribution: Powers the core marketplace where users discover and list rental spaces.
+
+Booking System:
+    
+    Enables guests to check availability and reserve properties for specific dates.
+    
+    Calculates total costs (price × nights + fees).
+    
+    Sends confirmation emails upon successful booking.
+
+    Contribution: Facilitates seamless transactions between hosts and guests.
+
+Reviews & Ratings
+    
+    Allows guests to leave ratings (1-5 stars) and comments after stays.
+    
+    Displays average ratings on property listings.
+    
+    Ensures verified reviews (only users who booked can review).
+
+    Contribution: Builds trust and transparency in the platform.
+
+Payment Processing:
+
+    Integrates a secure payment gateway (simulated or Stripe/PayPal).
+
+    Tracks transaction statuses (pending, completed, failed).
+
+    Stores payment history for users.
+
+    Contribution: Ensures reliable and secure financial transactions.
+
+Search & Filters:
+
+    Supports keyword-based searches (e.g., "beachfront villa").
+
+    Filters results by price range, location, amenities, etc.
+
+    Uses pagination for large result sets.
+
+    Contribution: Enhances discoverability and user experience.
+
+Admin Dashboard:
+
+    Provides moderation tools (manage users, properties, bookings).
+
+    Generates reports (revenue, popular listings).
+
+    Handles dispute resolution (refunds, bans).
+
+    Contribution: Ensures platform integrity and operational oversight.
+    
+Notifications:
+
+    Sends real-time alerts for bookings, messages, and payments.
+
+    Supports email and in-app notifications.
+
+    Contribution: Keeps users informed about key activities.
+
+Feature Dependencies:
+
+    User Management → Required for all other features.
+    
+    Property Management → Required for bookings & reviews.
+    
+    Booking System → Triggers payments and reviews.
+    
+    This breakdown ensures the project aligns with Airbnb’s core functionalities while maintaining scalability.
 
