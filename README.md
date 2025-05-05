@@ -162,3 +162,118 @@ Quality Assurance Engineer (Tester)
   Key Contribution:
     Guarantees a bug-free, high-quality user experience before deployment.
 
+
+Database Design
+    Key Entities & Relationships
+    
+Users
+Fields:
+
+    id (Primary Key)
+
+    username (Unique)
+
+    email (Unique)
+
+    password (Hashed)
+
+    role (Host/Guest)
+
+Relationships:
+
+    A User can list multiple Properties (One-to-Many).
+
+    A User can make multiple Bookings (One-to-Many).
+
+    A User can write multiple Reviews (One-to-Many).
+
+Properties
+Fields:
+
+    id (Primary Key)
+
+    title
+
+    description
+
+    price_per_night
+
+    location
+
+    host_id (Foreign Key → Users)
+
+Relationships:
+
+    A Property belongs to one User (Host) (Many-to-One).
+
+    A Property can have multiple Bookings (One-to-Many).
+
+    A Property can have multiple Reviews (One-to-Many).
+
+Bookings
+    Fields:
+
+    id (Primary Key)
+
+    check_in_date
+
+    check_out_date
+
+    total_price
+
+    guest_id (Foreign Key → Users)
+
+    property_id (Foreign Key → Properties)
+
+    Relationships:
+
+    A Booking belongs to one User (Guest) (Many-to-One).
+
+    A Booking is associated with one Property (Many-to-One).
+
+    A Booking can have one Payment (One-to-One).
+
+Reviews
+Fields:
+
+    id (Primary Key)
+
+    rating (1-5)
+
+    comment
+
+    user_id (Foreign Key → Users)
+
+    property_id (Foreign Key → Properties)
+
+    Relationships:
+
+    A Review is written by one User (Many-to-One).
+
+    A Review is associated with one Property (Many-to-One).
+
+Payments
+Fields:
+
+    id (Primary Key)
+
+    amount
+
+    payment_method (Credit Card, PayPal, etc.)
+
+    transaction_status (Pending/Completed/Failed)
+
+    booking_id (Foreign Key → Bookings)
+
+Relationships:
+
+    A Payment is linked to one Booking (One-to-One).
+
+
+Notes:
+Foreign Keys ensure data integrity between tables.
+
+Indexes are applied to frequently queried fields (e.g., property_id, user_id).
+
+Cascade rules are set for deletions (e.g., deleting a user removes their properties)
+
